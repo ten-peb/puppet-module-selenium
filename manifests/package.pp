@@ -41,7 +41,7 @@ class selenium::package {
     cwd     => '/tmp',
     path    => '/bin:/usr/bin',
     onlyif  => "test ! -f ${testjar}",
-    notify  => Exec['unzip testing jar']
+    notify  => Exec['unzip testng jar']
   }
 
   exec {'unzip testng jar':
