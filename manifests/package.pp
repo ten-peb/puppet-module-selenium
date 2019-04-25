@@ -10,10 +10,11 @@ class selenium::package {
   include tenna::deps::libs::xvfb
   include tenna::deps::libs::libxi6
   include tenna::deps::libs::libconf
-  # wget https://selenium-release.storage.googleapis.com/3.13/selenium-server-standalone-3.13.0.jar
+  # https://selenium-release.storage.googleapis.com/3.13/selenium-server-3.13.0.zip
+  
   $version='3.13'      # parameterize
   $selenium_site = 'https://selenium-release.storage.googleapis.com'
-  $jarfile = "selenium-server-standaline-${version}.0.jar"
+  $jarfile = "selenium-server-standalone-${version}.0.jar"
   $url_path = "${selenium_site}/${version}/${jarfile}"
   $cmd = "wget ${url_path}"
 
