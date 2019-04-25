@@ -45,7 +45,7 @@ class selenium::package {
   }
 
   exec {'unzip testng jar':
-    cmd         => "unzip /tmp/${testjar_zipfile}",
+    command     => "unzip /tmp/${testjar_zipfile}",
     path        => '/bin:/usr/bin',
     cwd         => '/usr/local/bin',
     refreshonly => true
