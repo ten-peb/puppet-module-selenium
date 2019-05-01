@@ -11,8 +11,8 @@ class selenium::package {
   include tenna::deps::libs::libxi6
   include tenna::deps::libs::libconf
   include tenna::deps::apps::chrome
-  include tenna::deps::drivers::chromedriver 
-    
+  include tenna::deps::drivers::chromedriver
+
   $version='3.13'      # parameterize
   $selenium_site = 'https://selenium-release.storage.googleapis.com'
   $jarfile = "selenium-server-standalone-${version}.0.jar"
@@ -29,7 +29,7 @@ class selenium::package {
       Package['xvfb'],
       Package['libxi6']
     ],
-    onlyif => "test ! -f ${jarfile}"
+    onlyif  => "test ! -f ${jarfile}"
   }
 
   $testjar_version='6.8.7'
@@ -52,5 +52,5 @@ class selenium::package {
     cwd         => '/usr/local/bin',
     refreshonly => true
   }
-    
+
 }
